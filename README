@@ -1,0 +1,71 @@
+🎓 Student Performance Prediction System
+A machine learning web application that predicts student exam marks and mental wellness based on cognitive and behavioral factors.
+
+🔗 Live Demo
+https://student-performance-garima.streamlit.app/
+
+📌 Features
+🔮 Marks Prediction — Predicts exam percentage based on study habits & cognitive inputs
+🧠 Mental Wellness Analysis — Scores mental health (0–100) based on stress, sleep & motivation
+💡 Personalized Suggestions — Actionable mental health tips based on student inputs
+📊 Performance Factor Chart — Visual breakdown of all contributing factors
+🔍 Feature Importance Chart — Shows which factors impact marks the most
+🏆 Grade Prediction — A+ to D grading system
+🔬 Model Comparison — 3 models compared, best one selected automatically
+🧠 ML Model Comparison
+Model	R² Score	MAE
+Linear Regression	0.7728	4.98
+Random Forest	0.7869	4.53
+Gradient Boosting ✅	0.8259	4.18
+Gradient Boosting was selected as the final model for best accuracy.
+
+📊 Input Features
+Feature	Type
+Study Hours	Academic
+Attendance %	Academic
+Sleep Hours	Cognitive
+Stress Level	Cognitive
+Focus Level	Cognitive
+Motivation Level	Cognitive
+Social Media Usage	Behavioral
+Revision Frequency	Academic
+Concentration Level	Cognitive
+Class Attention	Academic
+🛠️ Tech Stack
+Frontend: Streamlit
+ML Models: Scikit-learn (Linear Regression, Random Forest, Gradient Boosting)
+Data: NumPy, Pandas
+Visualization: Matplotlib
+Model Persistence: Joblib
+📁 Project Structure
+student-performance-predictor/
+├── app.py                  # Main Streamlit application
+├── train_model.py          # Model training & comparison
+├── generate_data.py        # Synthetic dataset generation
+├── student_data.csv        # Generated dataset (1000 records)
+├── student_model.pkl       # Saved best model (Gradient Boosting)
+├── model_results.csv       # Model comparison results
+├── requirements.txt        # Python dependencies
+└── README.md
+▶️ Run Locally
+# Clone the repo
+git clone https://github.com/YOUR_USERNAME/student-performance-predictor.git
+cd student-performance-predictor
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Generate data (optional - already included)
+python generate_data.py
+
+# Train models
+python train_model.py
+
+# Run app
+streamlit run app.py
+📝 About the Dataset
+Dataset is synthetically generated using realistic distributions based on educational psychology research patterns. Real student data was avoided due to student privacy concerns. The dataset contains 1000 student records with 10 features each.
+
+👩‍💻 Author
+Annu Gupta MCA Student
+Student Performance Prediction — Mini Project
